@@ -30,10 +30,6 @@ const links = [
     icon: UserGroupIcon 
   },
   
-    { name: 'Products', 
-      href: '/dashboard/products', 
-      icon: DocumentDuplicateIcon
-    }
 ];
 
 export default function NavLinks() {
