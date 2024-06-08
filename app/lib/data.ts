@@ -13,9 +13,9 @@ import {
 import { formatCurrency } from './utils';
 
 export async function fetchRevenue() {
-  // Add noStore() here to prevent the response from being cached.
+  // Add    here to prevent the response from being cached.
   // This is equivalent to in fetch(..., {cache: 'no-store'}).
-  noStore();
+    ;
 
 
   try {
@@ -61,7 +61,7 @@ export async function fetchCardData() {
     // You can probably combine these into a single SQL query
     // However, we are intentionally splitting them to demonstrate
     // how to initialize multiple queries in parallel with JS.
-    noStore();
+      ;
 
 
 
@@ -102,7 +102,7 @@ export async function fetchFilteredInvoices(
 ) {
   const offset = (currentPage - 1) * ITEMS_PER_PAGE;
 
-  noStore();
+    ;
 
 
   try {
@@ -137,7 +137,7 @@ export async function fetchFilteredInvoices(
 export async function fetchInvoicesPages(query: string) {
   try {
 
-    noStore();
+      ;
 
 
     const count = await sql`SELECT COUNT(*)
@@ -162,7 +162,7 @@ export async function fetchInvoicesPages(query: string) {
 export async function fetchInvoiceById(id: string) {
   try {
 
-    noStore();
+      ;
 
 
     const data = await sql<InvoiceForm>`
@@ -191,7 +191,7 @@ export async function fetchInvoiceById(id: string) {
 export async function fetchCustomers() {
   try {
 
-    noStore();
+      ;
 
 
     const data = await sql<CustomerField>`
@@ -213,7 +213,7 @@ export async function fetchCustomers() {
 export async function fetchFilteredCustomers(query: string) {
   try {
 
-    noStore();
+      ;
 
 
     const data = await sql<CustomersTableType>`
@@ -250,7 +250,7 @@ export async function fetchFilteredCustomers(query: string) {
 export async function getUser(email: string) {
   try {
 
-    noStore();
+      ;
 
     
     const user = await sql`SELECT * FROM users WHERE email=${email}`;
